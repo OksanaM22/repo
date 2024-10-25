@@ -15,10 +15,10 @@ def string_info(string):
 
 def is_contains(string, list_to_search):
     for item in list_to_search:
-
+        count_calls()
         if item.lower() == string.lower():
-            count_calls()
-            count_calls()
+            
+            
             return True
     return False
 
