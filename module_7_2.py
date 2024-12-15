@@ -3,16 +3,15 @@ from idlelib.iomenu import encoding
 from pprint import pprint
 
 def custom_write(file_name, strings):
-    file_name = 'test.txt'
+    strings_positions = {}
+    file = open('test.txt', 'w', encoding='utf-8')
     for line_number, item in enumerate(strings, start = 1):
-        strings_positions = {}
-        file = open('test.txt', 'a', encoding='utf-8')
         position = file.tell()
-        strings_positions = {(line_number, position): item}
-        print(strings_positions)
+        strings_positions[line_number, position] = item #создание словаря
         file.write(f'{item}\n')
-        file.close()
-    return (strings_positions)
+    file.close()
+    return strings_positions
+
 
 info = [
 
