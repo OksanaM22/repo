@@ -1,5 +1,4 @@
 #План перехват
-from itertools import count
 
 
 def personal_sum(numbers):
@@ -19,8 +18,7 @@ def calculate_average(numbers):
         return result[0] / (len(numbers) - result[1])
 
     except ZeroDivisionError:
-        if len (numbers) == 0:
-            return 0
+        return 0
 
     except TypeError:
         print( f'В numbers записан некорректный тип данных')
